@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def home
+    redirect_to("/users")
+  end
+  
   def all_users
     matching_users = User.all
     @users = matching_users.order(:created_at)
